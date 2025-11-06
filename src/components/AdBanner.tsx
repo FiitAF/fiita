@@ -14,6 +14,15 @@ export default function AdBanner() {
   useEffect(() => {
     setMounted(true);
     setPaid(isPaidUser());
+    
+    // تفعيل AdSense بعد تحميل الصفحة
+    if (typeof window !== 'undefined' && !isPaidUser()) {
+      try {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      } catch (err) {
+        console.error('AdSense error:', err);
+      }
+    }
   }, []);
 
   // لا نعرض الإعلان للمستخدمين المدفوعين
@@ -33,7 +42,7 @@ export default function AdBanner() {
             <div className="text-center">
               <p className="text-emerald-700 font-bold mb-2">🎯 مكان الإعلان</p>
               <p className="text-sm text-emerald-600">الإعلانات ستظهر هنا بعد النشر</p>
-              <p className="text-xs text-gray-500 mt-2">Google AdSense ID: ...8448</p>
+              <p className="text-xs text-gray-500 mt-2">Google AdSense ID: ...93895</p>
             </div>
           </div>
         ) : (
@@ -41,8 +50,8 @@ export default function AdBanner() {
           <div className="min-h-[100px] bg-white/50 rounded-lg flex items-center justify-center border border-emerald-200">
             <ins className="adsbygoogle"
                  style={{ display: 'block' }}
-                 data-ad-client="ca-pub-8245817291484448"
-                 data-ad-slot="2760024763"
+                 data-ad-client="ca-pub-9377524580433895"
+                 data-ad-slot="f08c47fec0942fa0"
                  data-ad-format="auto"
                  data-full-width-responsive="true"></ins>
           </div>
