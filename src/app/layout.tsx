@@ -38,6 +38,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='ar' dir='rtl'>
       <head>
+        {/* Google AdSense Meta Tag */}
+        <meta name="google-adsense-account" content="ca-pub-9377524580433895" />
+        
         {/* Google AdSense */}
         <Script
           async
